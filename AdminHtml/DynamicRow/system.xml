@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="example_module" translate="label" sortOrder="450">
+            <label>Settings</label>
+        </tab>
+
+        <section id="examplemodule_control" translate="label" type="text" sortOrder="40"
+                 showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Example Settings</label>
+            <tab>vendor_examplemodule</tab>
+            <resource>Magento_Backend::admin</resource>
+
+            <group id="settings_group" sortOrder="10" translate="label"
+                   showInDefault="1" showInStore="1" showInWebsite="1">
+                <label>Settings</label>
+                
+                <field id="dynamic_field" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Custom Requirement</label>
+                    <frontend_model>Vendor\ExampleModule\Block\Adminhtml\Form\Field\Row</frontend_model>
+                    <backend_model>Magento\Config\Model\Config\Backend\Serialized\ArraySerialized</backend_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
