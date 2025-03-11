@@ -5,6 +5,12 @@ use Magento\Framework\View\Element\Html\Select;
 
 class Column extends Select
 {
+
+    public function setInputName($value)
+    {
+        return $this->setName($value);
+    }
+    
     public function _toHtml(): string
     {
         if (!$this->getOptions()) {
